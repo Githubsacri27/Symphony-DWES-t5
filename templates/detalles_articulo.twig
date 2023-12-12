@@ -1,0 +1,13 @@
+{% extends "base.twig" %}
+
+{% block content %}
+
+	<div class="card" style="width: 13rem;">
+<img src="{{ asset('imagenes') }}/{{articulo.imagen}}" class="card-img-top" />
+<div class="card-body">
+<h5 class="card-title">{{articulo.autor}} - {{articulo.titulo}}</h5>
+    <p class="card-text">Id de artículo: {{articulo.id}}</p>
+    </div>
+    
+    </div>
+{% endblock %}	

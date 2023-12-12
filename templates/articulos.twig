@@ -1,0 +1,19 @@
+{% extends "base.twig" %}
+
+{% block content %}
+
+
+
+{%for articulo in articulos %}
+<div class="card" style="width: 13rem;">
+<img src="{{ asset('imagenes') }}/{{articulo.imagen}}" class="card-img-top" />
+<div class="card-body">
+<h5 class="card-title">{{articulo.titulo}}</h5>
+    <p class="card-text">{{articulo.autor}}</p>
+    <a href="{{ path('articulo', {'id':articulo.id})}}" class="btn btn-primary">Detalles</a>
+    </div>
+    
+    </div>
+{% endfor %}
+
+{% endblock %}	
